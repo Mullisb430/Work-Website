@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="narative_styles.css" />
+    <script src="narative.js"></script>
+</head>
+<body>
+    <main>
+        <form class="container">
+            <h1>Dialysis Trips</h1>
+            <div class="selectionContainer">
+                <label for="aOrB">A or B trip?</label>
+                <select name="aOrB" id="selectionDialysisOne">
+                    <option>A</option>
+                    <option>B</option>
+                </select>
+            </div>
+
+            <div class="selectionContainer">
+                <label for="patientSelect">Which patient?</label>
+                <select name="patientSelect" id="selectionDialysisTwo">
+                    <option>GS</option>
+                    <option>DP</option>
+                    <option>SD</option>
+                    <option>MT</option>
+                    <option>AR</option>
+                    <option>PM</option>
+                </select>
+            </div>
+
+
+            <input type="button" name="generate" value="Generate" onclick="generateDialysisNarative()" class="selectionContainer">
+
+        </form>
+        <form class="container" id="doctorsContainer">
+            <h1>Doctor's Trips</h1>
+            <div class="selectionContainer">
+                <label for="homeOrDialysis">Type of doctor trip?</label>
+                <select name="homeOrDialysis" id="selectionDoctorOne">
+                    <option>A trip from home to doctor</option>
+                    <option>A trip from dialysis to doctor</option>
+                    <option>B trip from doctor to dialysis</option>
+                    <option>B trip from doctor to home</option>
+                </select>
+            </div>
+
+            <div class="selectionContainer">
+                <label for="nameOfPlace">Name of the doctor's office?</label>
+                <input type="text" name="nameOfPlay" id="textDoctorOne">
+            </div>
+
+            <div class="selectionContainer">
+                <label for="addressForDoctor">What is the address for the doctor's office?</label>
+                <input type="text" name="addressForDoctor" id="textDoctorTwo">
+            </div>
+
+            <div class="selectionContainer">
+                <label for="patientSelect">Which patient?</label>
+                <select name="patientSelect" id="selectionDoctorTwo">
+                    <option>GS</option>
+                    <option>DP</option>
+                    <option>SD</option>
+                    <option>MT</option>
+                    <option>AR</option>
+                    <option>PM</option>
+                </select>
+            </div>
+
+
+            <input type="button" name="generate" value="Generate" onclick="generateDoctorNarative()" class="selectionContainer">
+
+
+        </form>
+    </main>
+    <aside>
+        <div class="container">
+            <h1 id="milesDialysis"></h1>
+            <p id="narativeDialysis" class="narative"></p>
+        </div>
+        <div class="container">
+            <h1 id="milesDoctor"></h1>
+            <p id="narativeDoctor" class="narative"></p>
+        </div>
+    </aside>
+</body>
+</html>

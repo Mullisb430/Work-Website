@@ -1,0 +1,30 @@
+body {
+    font-family: 'Avenir';
+    background-color: #181c24;
+}
+
+main, aside {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    margin-top: 100px;
+}
+
+.container, #doctorsContainer {
+    margin: auto;
+    width: 400px;
+    height: 325px;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    padding: 15px;
+}
+
+.selectionContainer {
+    margin: 15px;
+}
+
+.narative {
+    font-size: xx-small;
+}
